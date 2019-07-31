@@ -6,6 +6,15 @@ describe Calculator, "About Calculator" do
   #BetterSpecs => http://www.betterspecs.org.br
 
   #Obs.: context agrupa testes em comun
+  context '#div' do
+    it 'divided by 0' do      
+      expect{subject.div(3,0)}.to raise_error(ZeroDivisionError)
+      expect{subject.div(3,0)}.to raise_error("divided by 0")
+      expect{subject.div(3,0)}.to raise_error(ZeroDivisionError, "divided by 0")
+      expect{subject.div(3,0)}.to raise_error(/divided/)
+    end
+  end
+
   context '#sum' do
     #Obs.: tanto "it" quanto "specify" fazem a mesma coisa!    
     it 'positive numbers' do 
