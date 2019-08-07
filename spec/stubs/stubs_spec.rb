@@ -2,7 +2,7 @@ require 'student'
 require 'course'
 
 describe 'Stub' do
-  it '__' do
+  it 'has_finished?' do
       student = Student.new
       course = Course.new
 
